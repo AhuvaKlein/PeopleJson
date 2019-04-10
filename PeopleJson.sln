@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleJson", "PeopleJson\PeopleJson.csproj", "{1F0F10C0-4DED-4BEF-B765-1C8A397CCEFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleJson.Data", "PeopleJson.Data\PeopleJson.Data.csproj", "{0FE500C1-CB68-4536-9149-DFC88A61D939}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1F0F10C0-4DED-4BEF-B765-1C8A397CCEFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F0F10C0-4DED-4BEF-B765-1C8A397CCEFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F0F10C0-4DED-4BEF-B765-1C8A397CCEFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FE500C1-CB68-4536-9149-DFC88A61D939}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FE500C1-CB68-4536-9149-DFC88A61D939}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FE500C1-CB68-4536-9149-DFC88A61D939}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FE500C1-CB68-4536-9149-DFC88A61D939}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

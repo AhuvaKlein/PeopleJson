@@ -1,31 +1,54 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿
+@using PeopleJson.Data
+@model IEnumerable<Person>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    <div class="col-md-3 col-md-offset-4 well">
+        <input type="text" class="form-control" id="first-name-input" placeholder="First Name" />
+        <input type="text" class="form-control" id="last-name-input" placeholder="Last Name" />
+        <input type="text" class="form-control" id="age-input" placeholder="Age" />
+        <button class="btn btn-warning" id="add-person-btn">Add Person</button>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <div>
+        <table class="table table-bordered" id="people-table">
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </tr>
+        </table>
     </div>
 </div>
+
+
+<div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h2 class="modal-title" id="exampleModalLabel">Edit Person</h2>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control" id="first-name-modal" placeholder="First Name" />
+                <input type="text" class="form-control" id="last-name-modal" placeholder="Last Name" />
+                <input type="text" class="form-control" id="age-modal" placeholder="Age" />
+                <input type="hidden" id="id-modal" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" id="edit-modal-button">Edit Person</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts {
+    <script src="~/Scripts/index.js"></script>
+}
